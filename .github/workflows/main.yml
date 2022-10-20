@@ -14,3 +14,4 @@ jobs:
         server: ftp.adsinnov.com
         username: jatin@rediads.com
         password: ${{ secrets.password }}
+        
