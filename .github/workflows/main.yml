@@ -12,6 +12,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         server: ftp.adsinnov.com
-        username: jatin@rediads.com
+        username: fftprediads@rediads.com
         password: ${{ secrets.password }}
         
