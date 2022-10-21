@@ -1,18 +1,87 @@
 
+AMAZON + PREBID + GOOGLE AD MANAGER
 
- <div class="paisa-banner">
-    <div data-adslot="/21742552194/NueGamers/Leaderboard"
-         data-size-desktop="[[728,90],[728,250]]"
-         data-size-mobile="[[250,250],[300,250],[320,480],[320,100],[320,50]]"
-         data-ad-refresh=true>
-    </div>
- </div>
+<script>
+        (function () {
+
+            // Load APS library
+            !function (a9, a, p, s, t, A, g) {
+                if (a[a9]) return;
+
+                function q(c, r) {
+                    a[a9]._Q.push([c, r])
+                }
+
+                a[a9] = {
+                    init: function () {
+                        q("i", arguments)
+                    }, fetchBids: function () {
+                        q("f", arguments)
+                    }, setDisplayBids: function () {
+                    }, targetingKeys: function () {
+                        return []
+                    }, _Q: []
+                };
+                A = p.createElement(s);
+                A.async = !0;
+                A.src = t;
+                g = p.getElementsByTagName(s)[0];
+                g.parentNode.insertBefore(A, g)
+            }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+
+        })();
+    </script>
+    <script async src="https://rediads.com/code/netalways/zsh/prebid.js"></script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script src="https://rediads.com/code/netalways/zsh/ads.js" defer></script>
+
+BODY ADS
+
+1 - /1019715/Zodiacsigns-horoscope.com/Leaderboard
+2 - /1019715/Zodiacsigns-horoscope.com/ATF
+3 - /1019715/Zodiacsigns-horoscope.com/ATF_1
+4 - /1019715/Zodiacsigns-horoscope.com/MTF_1
+5 - /1019715/Zodiacsigns-horoscope.com/MTF_1_A
+6 - /1019715/Zodiacsigns-horoscope.com/MTF_2
+7 - /1019715/Zodiacsigns-horoscope.com/MTF_2_A
+8 - /1019715/Zodiacsigns-horoscope.com/MTF_3
+9 - /1019715/Zodiacsigns-horoscope.com/MTF_3_A
+10- /1019715/Zodiacsigns-horoscope.com/MTF_4
+11- /1019715/Zodiacsigns-horoscope.com/MTF_4_A
+12- /1019715/Zodiacsigns-horoscope.com/MTF_5
+13- /1019715/Zodiacsigns-horoscope.com/MTF_5_A
+14- /1019715/Zodiacsigns-horoscope.com/MTF_6
+15- /1019715/Zodiacsigns-horoscope.com/MTF_6_A
+16- /1019715/Zodiacsigns-horoscope.com/MTF_7
+17- /1019715/Zodiacsigns-horoscope.com/MTF_7_A
+18- /1019715/Zodiacsigns-horoscope.com/RSB_2
+19- /1019715/Zodiacsigns-horoscope.com/LSB_Sticky
+20- /1019715/Zodiacsigns-horoscope.com/BottomOverlay
+21- /1019715/Zodiacsigns-horoscope.com/Parallax
+22- /1019715/Zodiacsigns-horoscope.com/Parallax_2
+23- /1019715/Zodiacsigns-horoscope.com/ZSH_videoads_1
+24- /1019715/Zodiacsigns-horoscope.com/HP_Leaderboard
 
 
- <div class="Adsinnov_flex_adcontainer">
+1.
+<div data-adslot="/1019715/Zodiacsigns-horoscope.com/Leaderboard"
+     data-size-desktop="[[728,90]]"
+     data-size-mobile="[[300,250]]"
+     data-ad-refresh=true>
+</div>
+
+2.
+<div data-adslot="/1019715/Zodiacsigns-horoscope.com/HP_Leaderboard"
+     data-size-desktop="[[728,90]]"
+     data-size-mobile="[[300,250]]"
+     data-ad-refresh=true>
+</div>
+
+3.
+<div class="Adsinnov_flex_adcontainer">
      <div class="AdsInnov_Ad_Card_MTF">
          <div class="AdsInnov_Ad_Lable">advertisement</div>
-          <div data-adslot="/21742552194/NueGamers/Leaderboard"
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/ATF"
                data-size-desktop="[[300,250]]"
                data-size-mobile="[[300,250]]"
                data-ad-refresh=true>
@@ -21,10 +90,265 @@
 
      <div class="AdsInnov_Ad_Card_MTF_A">
          <div class="AdsInnov_Ad_Lable">advertisement</div>
-         <div data-adslot="/21742552194/NueGamers/Leaderboard"
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/ATF_1"
            data-size-desktop="[[300,250]]"
            data-size-mobile="[[320,50]]"
            data-ad-refresh=true>
          </div>
      </div>
- </div>
+</div>
+
+4.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_1"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_1_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+5.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_2"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_2_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+6.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_3"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_3_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+7.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_4"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_4_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+7.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_5"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_5_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+8.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_6"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_6_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+9.
+<div class="Adsinnov_flex_adcontainer">
+     <div class="AdsInnov_Ad_Card_MTF">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+          <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_7"
+               data-size-desktop="[[300,250]]"
+               data-size-mobile="[[300,250]]"
+               data-ad-refresh=true>
+          </div>
+     </div>
+
+     <div class="AdsInnov_Ad_Card_MTF_A">
+         <div class="AdsInnov_Ad_Lable">advertisement</div>
+         <div data-adslot="/1019715/Zodiacsigns-horoscope.com/MTF_7_A"
+           data-size-desktop="[[300,250]]"
+           data-size-mobile="[[320,50]]"
+           data-ad-refresh=true>
+         </div>
+     </div>
+</div>
+
+10.
+<div data-adslot="/1019715/Zodiacsigns-horoscope.com/RSB_2"
+     data-size-desktop="[[300,250]]"
+     data-size-mobile="[[300,250]]"
+     data-ad-refresh=true>
+</div>
+
+11.
+<style>
+    .EujfCqUhLFJr98nr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FBFBFB;
+        height: 90px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 99999;;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .EujfCqUhLFJr98nr {
+            height: 50px !important;
+        }
+    }
+</style>
+<div class='EujfCqUhLFJr98nr'>
+    <div data-adslot="/1019715/Zodiacsigns-horoscope.com/RSB_2"
+         data-size-desktop="[[728,90]]"
+         data-size-mobile="[[320,50]]"
+         data-ad-refresh=true>
+    </div>
+</div>
+
+12.
+<style>
+
+    .g1-frame-inner {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    @media only screen and (min-width: 480px) {
+        .stickyads_Left {
+            position: fixed;
+            left: 0px;
+            top: 25px;
+            text-align: center;
+            z-index: 999999;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .stickyads_Left .btn_left {
+            position: absolute;
+            top: -12px;
+            left: 80px;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #555;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 1390px) {
+        .stickyads_Left {
+            display: none;
+        }
+    }
+
+    .stickyads_Left .btn_left {
+        position: absolute;
+        top: -12px;
+        left: 10px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: transparent;
+        color: rgb(230, 21, 21);
+        font-size: 10px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+
+
+</style>
+<div id='closebtn_Left' class='stickyads_Left'>
+    <div data-adslot="/1019715/Zodiacsigns-horoscope.com/LSB_Sticky"
+             data-size-desktop="[[728,90]]"
+             data-size-mobile="[[320,50]]"
+             data-ad-refresh=true>
+        </div>
+    <button class='btn_left' onclick='change_css_Left()'>x</button>
+</div>
+
+13.
+<div data-adslot="/1019715/Zodiacsigns-horoscope.com/ZSH_videoads_1"
+     data-size-desktop="[[1,1]]"
+     data-size-mobile="[[1,1]]"
+     data-ad-refresh=true>
+</div>
