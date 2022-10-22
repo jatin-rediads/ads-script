@@ -7,7 +7,7 @@ googletag.cmd.push(function () {
 });
 if (typeof apstag != "undefined") {
     apstag.init({
-        pubID: '5d8ed25e-57cc-441a-b62a-127b34faae4e',
+        pubID: 'ac0d98fe-1a9c-4701-aede-efc3ec6932fa',
         adServer: 'googletag',
         bidTimeout: 2e3
     });
