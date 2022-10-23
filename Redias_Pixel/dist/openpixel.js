@@ -703,4 +703,4 @@
       );
     }
   };
-})(window, document, window["opix"], "opix", "https://rediads.com/code/Rediads_Pixel/pixel.js", 1);
+})(window, document, window["opix"], "opix", "https://rediads.com/code/Rediads_Pixel/pixeldata.php", 1);
