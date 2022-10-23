@@ -1,6 +1,6 @@
 // Get City, Country,IP
 
-fetch("https://extreme-ip-lookup.com/json/?key=demo_2")
+fetch("https://extreme-ip-lookup.com/json/?key=tWyvkBROzF4Q65Iibma3")
   .then((res) => res.json())
   .then((response) => {
     sessionStorage.setItem("Country", response.country);
