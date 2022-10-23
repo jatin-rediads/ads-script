@@ -9,6 +9,50 @@ We have 3 different js files for ad tags.
 
 
 
+## Head Tag
+
+```http
+  PATH (GAM) Basic                      - /code/global/basic.js
+  PATH (GAM + Prebid) Rookie            - /code/global/rookie.js
+  PATH (GAM + Prebid + Amazon) Ultimate - /code/global/ultimate.js
+```
+
+```html
+<script>
+        (function () {
+
+            // Load APS library
+            !function (a9, a, p, s, t, A, g) {
+                if (a[a9]) return;
+
+                function q(c, r) {
+                    a[a9]._Q.push([c, r])
+                }
+
+                a[a9] = {
+                    init: function () {
+                        q("i", arguments)
+                    }, fetchBids: function () {
+                        q("f", arguments)
+                    }, setDisplayBids: function () {
+                    }, targetingKeys: function () {
+                        return []
+                    }, _Q: []
+                };
+                A = p.createElement(s);
+                A.async = !0;
+                A.src = t;
+                g = p.getElementsByTagName(s)[0];
+                g.parentNode.insertBefore(A, g)
+            }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+
+        })();
+    </script>
+    <script src="https://rediads.com/code/global/prebid.js"></script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script src="https://rediads.com/code/global/ads.js" defer></script>
+```
+
 ## Body Tags Parameter
 
 #### All items
@@ -35,14 +79,14 @@ We have 3 different js files for ad tags.
   </div>
 ```
 
-#### Prebid with gpt ad tag
+#### Prebid With Gpt Ad Tag
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `data-adslot` | `string` | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
-| `data-size` | `string` | **Required**. GPT AD Size # "[[300,250]]"|
-| `data-size-mobile` | `string` | **Required**. GPT AD Size # "[[300,250]]"|
-| `data-ad-refresh=true` | `boolean` | true / false |
+| Parameter              | Type      | Description                                                    |
+|:-----------------------|:----------|:---------------------------------------------------------------|
+| `data-adslot`          | `string`  | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
+| `data-size`            | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-size-mobile`     | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-ad-refresh=true` | `boolean` | true / false                                                   |
 
 ```html
   <div 
@@ -54,14 +98,14 @@ We have 3 different js files for ad tags.
 ```
 
 
-#### Amazon + Prebid with gpt ad tag
+#### Amazon + Prebid With Gpt Ad Tag
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `data-adslot` | `string` | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
-| `data-size-desktop` | `string` | **Required**. GPT AD Size # "[[300,250]]"|
-| `data-size-mobile` | `string` | **Required**. GPT AD Size # "[[300,250]]"|
-| `data-ad-refresh=true` | `boolean` | true / false |
+| Parameter              | Type      | Description                                                    |
+|:-----------------------|:----------|:---------------------------------------------------------------|
+| `data-adslot`          | `string`  | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
+| `data-size`            | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-size-mobile`     | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-ad-refresh=true` | `boolean` | true / false                                                   |
 
 ```html
 
@@ -73,14 +117,14 @@ We have 3 different js files for ad tags.
 
 ```
 
-#### Parallax ad tag
+#### Parallax Ad Tag
 
-| Parameter | Type     | Description                |  
-| :-------- | :------- | :------------------------- |  
-| `data-adslot` | `string` | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |  
-| `data-size-desktop` | `string` | **Required**. GPT AD Size # "[[300,250]]"|  
-| `data-size-mobile` | `string` | **Required**. GPT AD Size # "[[300,250]]"|  
-| `data-ad-refresh=true` | `boolean` | true / false |  
+| Parameter              | Type      | Description                                                    |
+|:-----------------------|:----------|:---------------------------------------------------------------|
+| `data-adslot`          | `string`  | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
+| `data-size`            | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-size-mobile`     | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-ad-refresh=true` | `boolean` | true / false                                                   |
 
 ```html  
 <div style="height:340px; text-align: center;  " class="parallax_container">  
@@ -98,14 +142,14 @@ We have 3 different js files for ad tags.
 </div>  
 ```
 
-#### In-Page Sticky ad tag
+#### In-Page Sticky Ad Tag
 
-| Parameter | Type     | Description                |  
-| :-------- | :------- | :------------------------- |  
-| `data-adslot` | `string` | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |  
-| `data-size-desktop` | `string` | **Required**. GPT AD Size # "[[300,250]]"|  
-| `data-size-mobile` | `string` | **Required**. GPT AD Size # "[[300,250]]"|  
-| `data-ad-refresh=true` | `boolean` | true / false |  
+| Parameter              | Type      | Description                                                    |
+|:-----------------------|:----------|:---------------------------------------------------------------|
+| `data-adslot`          | `string`  | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
+| `data-size`            | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-size-mobile`     | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-ad-refresh=true` | `boolean` | true / false                                                   |
 
 ```html  
 <div class="paisa-banner">  
@@ -119,3 +163,34 @@ We have 3 different js files for ad tags.
 
 
 
+
+#### Two Ad Side By Side Tag
+
+| Parameter              | Type      | Description                                                    |
+|:-----------------------|:----------|:---------------------------------------------------------------|
+| `data-adslot`          | `string`  | **Required**. GPT AD Path "/21742552194/NueGamers/Leaderboard" |
+| `data-size`            | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-size-mobile`     | `string`  | **Required**. GPT AD Size # "[[300,250]]"                      |
+| `data-ad-refresh=true` | `boolean` | true / false                                                   |
+
+```html  
+<div class="Rediads_flex_adcontainer">
+    <div class="Rediads_Ad_Card_MTF">
+        <div class="Rediads_Ad_Lable">advertisement</div>
+        <div class="Redias_center" data-adslot="/21742552194/NueGamers/MTF_1"
+             data-size-desktop="[[300,250]]"
+             data-size-mobile="[[300,250]]"
+             data-ad-refresh=true>
+        </div>
+    </div>
+
+    <div class="Rediads_Ad_Card_MTF_A">
+        <div class="Rediads_Ad_Lable">advertisement</div>
+        <div class="Redias_center" data-adslot="/21742552194/NueGamers/MTF_1"
+             data-size-desktop="[[300,250]]"
+             data-size-mobile="[[320,50]]"
+             data-ad-refresh=true>
+        </div>
+    </div>
+</div>
+```
