@@ -1,4 +1,3 @@
-
 /* Bottom Overlay Start */
 
 .Rediads_BottomSticky {
@@ -20,6 +19,7 @@
         height: 50px !important;
     }
 }
+
 /* Bottom Overlay End */
 
 /* Side to Side Ad CSS Start */
@@ -37,6 +37,12 @@
 .Rediads_MTF_adsblocks {
     min-width: 300px;
     min-height: 250px;
+}
+
+.Redias_center {
+    display: flex;
+    justify-content: center;
+    place-items: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -84,11 +90,13 @@
 }
 
 .Rediads_Ad_Lable {
-    height: 17px;
+    color: #949494;
+    content: "Advertisment";
+    font-family: "Barlow";
+    font-size: 12px;
+    padding: 1rem 2rem 0.25rem;
     text-transform: uppercase;
-    color: grey;
     text-align: center;
-    font-size: 8px;
 }
 
 .Rediads_Ad_Card_MTF_A {
@@ -135,9 +143,19 @@
 .parallax_container {
     background-color: #fff;
     width: 100%;
-    height: 600px;
+    height: 400px;
     position: relative;
     margin: 40px auto;
+}
+
+.parallax_container:before {
+    border-bottom: 1px solid #dfdfdf;
+    color: #949494;
+    content: "Parallax Ad Below";
+    font-family: "Barlow";
+    font-size: 12px;
+    padding: 1rem 2rem 0.25rem;
+    text-transform: uppercase;
 }
 
 .parallax_container_one {
@@ -151,6 +169,7 @@
     display: flex;
     place-items: center;
     justify-content: center;
+    top: 30px;
 }
 
 .parallax_container_two {
@@ -201,6 +220,7 @@ body .paisa-banner-lb > div:first-child {
     position: sticky !important;
     top: 55px;
 }
+
 /* Leaderboard Ends */
 
 /* MTF ad Start: css */
