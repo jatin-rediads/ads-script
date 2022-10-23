@@ -148,6 +148,9 @@
     margin: auto;
     z-index: auto;
     clip: rect(0, auto, auto, 0);
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
 
 .parallax_container_two {
@@ -156,7 +159,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 75%;
+    width: 100%;
     height: 100%;
     transform: matrix(1, 0, 0, 1, 0, 0);
     overflow: hidden;
