@@ -1,0 +1,63 @@
+{
+  "_from": "openpixel",
+  "_id": "openpixel@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-hbrTF0O+oYirzFiBsEf4Ze0WnbWXXWrPnOrtYeEdUGL2bbBI0JC7JqSASydtAPg3bdBzGkIqBWaILCnk6Ws9zQ==",
+  "_location": "/openpixel",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "openpixel",
+    "name": "openpixel",
+    "escapedName": "openpixel",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/openpixel/-/openpixel-1.2.0.tgz",
+  "_shasum": "2ecc5c5df3e2077bb829b76785be7506bbed3cbc",
+  "_spec": "openpixel",
+  "_where": "/var/www/html",
+  "author": {
+    "name": "Stuart Yamartino"
+  },
+  "bugs": {
+    "url": "https://github.com/dockwa/openpixel/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-iife": "^0.4.0",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "natives": "^1.1.6"
+  },
+  "deprecated": false,
+  "description": "Open Pixel is a JavaScript library for creating embeddable and intelligent tracking pixels",
+  "homepage": "https://github.com/dockwa/openpixel#readme",
+  "license": "MIT",
+  "main": "openpixel.min.js",
+  "name": "openpixel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dockwa/openpixel.git"
+  },
+  "scripts": {
+    "dist": "gulp build",
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch"
+  },
+  "version": "1.2.0"
+}
