@@ -24,7 +24,7 @@ setTimeout(function () {
       (p.t = +new Date()),
       ((i = t.createElement(n)).async = 1),
       (i.src =
-        "https://storage.googleapis.com/videoassets-pathfinder/Pathfinder_videoads/PromotRPixel/dist/openpixel.js?" +
+        "https://rediads/code/Rediads_Pixel/dist/openpixel.js?" +
         864e5 * Math.ceil(new Date() / 864e5)),
       (a = t.getElementsByTagName(n)[0]).parentNode.insertBefore(i, a));
   })(window, document, "script", "opix"),
