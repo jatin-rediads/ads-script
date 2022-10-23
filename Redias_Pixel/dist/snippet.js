@@ -24,7 +24,7 @@ setTimeout(function () {
       (p.t = +new Date()),
       ((i = t.createElement(n)).async = 1),
       (i.src =
-        "https://rediads/code/Rediads_Pixel/dist/openpixel.js?" +
+        "https://rediads.com/code/Redias_Pixel/dist/openpixel.js?" +
         864e5 * Math.ceil(new Date() / 864e5)),
       (a = t.getElementsByTagName(n)[0]).parentNode.insertBefore(i, a));
   })(window, document, "script", "opix"),
