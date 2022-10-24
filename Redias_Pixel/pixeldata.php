@@ -30,7 +30,7 @@
 
 
 
-$fetchuid = "select ID from `pixel` where userid='"$_REQUEST['userid']"'";
+$fetchuid = "select ID from `pixel` where userid='".$_request['userid']."'";
 echo $fetchuid;
 $result = $mysqli -> query($fetchuid);
 
