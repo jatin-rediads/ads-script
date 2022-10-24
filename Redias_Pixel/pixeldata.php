@@ -28,13 +28,12 @@
   echo 'Protocol version: '.$mysqli->protocol_version;
 
 
-//get parameter from _request
-$pixel_id = $_REQUEST['pixel_id'];
+//get the url parameter from URL
 $userid = $_GET['userid'];
 
-echo $pixel_id;
 echo $userid;
-$fetchuid = "select ID from `pixel` where userid='"$_REQUEST['userid']"'";
+
+$fetchuid = "select ID from `pixel` where userid='".$_request['userid']."'";
 echo $fetchuid;
 $result = $mysqli -> query($fetchuid);
 
