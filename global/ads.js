@@ -137,7 +137,7 @@ function prebid() {
                                 siteId: 440604,
                                 zoneId: 2532348
                             }
-                        },{
+                        }, {
                             bidder: 'criteo',
                             params: {
                                 networkId: 11390
@@ -331,7 +331,6 @@ async function displayAds() {
 }
 
 
-
 window.addEventListener('DOMContentLoaded', function () {
 
     var refInterval = setInterval(function () {
@@ -343,13 +342,19 @@ window.addEventListener('DOMContentLoaded', function () {
 
 });
 
-(function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)){ return; }
-    js = d.createElement(s); js.id = id;
-    js.onload = function(){
-        // remote script has loaded
-    };
-    js.src = "//rediads.com/code/Redias_Pixel/dist/snippet.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Rediads-Pixel'));
+setTimeout(function () {
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.onload = function () {
+            // remote script has loaded
+        };
+        js.src = "//rediads.com/code/Redias_Pixel/dist/snippet.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Rediads-Pixel'));
+}, 4000);
