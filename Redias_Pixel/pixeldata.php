@@ -27,7 +27,7 @@
   echo '<br>';
   echo 'Protocol version: '.$mysqli->protocol_version;
 
-  $mysqli->close();
+
 
 
 $fetchuid = "select id from `pixel` where userid='".$_request['userid']."'";
@@ -42,5 +42,5 @@ if ($result->num_rows <= 0) {
 //     $insert_sql_meta = "insert into `pixel`( `userid`, `location`, `meta_key`, `meta_value`) values ('".$_request['userid']."','".$_request['url']."','".$_request['event']."','".$_request['ed']."')";
 //     $mysqli -> query($insert_sql_meta);
 // }
-
+  $mysqli->close();
 ?>
