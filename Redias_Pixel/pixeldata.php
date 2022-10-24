@@ -31,6 +31,7 @@
 
 
 $fetchuid = "select id from `pixel` where userid='".$_request['userid']."'";
+echo $fetchuid;
 $result = $mysqli -> query($fetchuid);
 
 if ($result->num_rows <= 0) {
