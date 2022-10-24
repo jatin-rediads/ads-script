@@ -36,12 +36,12 @@ setTimeout(function () {
   }
 }, 3000);
 
-//Click tracking
-click_count = 0;
-document.addEventListener("click", function () {
-  click_count = click_count + 1;
-  sessionStorage.setItem("clicks", click_count);
-});
-setTimeout(() => {
-  opix("event", "Click", click_count);
-}, 10000);
+// //Click tracking
+// click_count = 0;
+// document.addEventListener("click", function () {
+//   click_count = click_count + 1;
+//   sessionStorage.setItem("clicks", click_count);
+// });
+// setTimeout(() => {
+//   opix("event", "Click", click_count);
+// }, 10000);
