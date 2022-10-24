@@ -701,6 +701,6 @@
     document,
     window["opix"],
     "opix",
-    "https://rediads.com/code/Rediads_Pixel/pixeldata.php",
+    "https://rediads.com/code/Redias_Pixel/pixeldata.php",
     1
 );
