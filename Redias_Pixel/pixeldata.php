@@ -32,8 +32,8 @@
 $pixel_id = $_REQUEST['pixel_id'];
 $userid = $_GET['userid'];
 
-
-
+echo $pixel_id;
+echo $userid;
 $fetchuid = "select ID from `pixel` where userid='"$_REQUEST['userid']"'";
 echo $fetchuid;
 $result = $mysqli -> query($fetchuid);
