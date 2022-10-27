@@ -1,5 +1,5 @@
 
-AMAZON + PREBID + GOOGLE AD MANAGER
+AMAZON + PREBID + GOOGLE AD MANAGER Jatin
 
 <script>
         (function () {
@@ -63,6 +63,13 @@ BODY ADS
 24- /1019715/Zodiacsigns-horoscope.com/HP_Leaderboard
 
 
+<div data-adslot="/1019715/Zodiacsigns-horoscope.com/Parallax"
+     data-size-desktop="[[300,1050]]"
+     data-size-mobile="[[300,1050]]"
+     data-ad-refresh=true>
+</div>
+
+
 1.
 <div data-adslot="/1019715/Zodiacsigns-horoscope.com/Leaderboard"
      data-size-desktop="[[728,90]]"
@@ -99,6 +106,7 @@ BODY ADS
 </div>
 
 4.
+
 <div class="Adsinnov_flex_adcontainer">
      <div class="AdsInnov_Ad_Card_MTF">
          <div class="AdsInnov_Ad_Lable">advertisement</div>
