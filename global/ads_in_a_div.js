@@ -32,7 +32,7 @@ googletag.cmd.push(function () {
     });
 
 });
-
+//re
 function refreshBid(slot, slotName, slotId, slotSize) {
     pbjs.que.push(function () {
         pbjs.requestBids({
