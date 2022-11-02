@@ -50,11 +50,9 @@ function refreshBid(slot, slotName, slotId, slotSize) {
     var ele = document.getElementById(slotId);
     if (getDeviceType() == "desktop") {
         adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
-        window.parent.document.getElementById(window.name).style.cssText = "width: 728px; height: 90px;";
     }
     if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
         adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
-        window.parent.document.getElementById(window.name).style.cssText = "width: 300px; height: 250px;";
     }
 
     if (slotId && adSize && slotName) {
@@ -120,11 +118,9 @@ function prebid() {
 
                 if (getDeviceType() == "desktop") {
                     adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
-                    window.parent.document.getElementById(window.name).style.cssText = "width: 728px; height: 90px;";
                 }
                 if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
                     adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
-                    window.parent.document.getElementById(window.name).style.cssText = "width: 300px; height: 250px;";
                 }
                 var objPrebid = { //prebid
                     code: adSlot,
@@ -195,11 +191,9 @@ function constructAds() {
                 var divId = ele.getAttribute('id');
                 if (getDeviceType() == "desktop") {
                     adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
-                    window.parent.document.getElementById(window.name).style.cssText = "width: 728px; height: 90px;";
                 }
                 if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
                     adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
-                    window.parent.document.getElementById(window.name).style.cssText = "width: 300px; height: 250px;";
                 }
 
                 if (typeof googletag != 'undefined') {
