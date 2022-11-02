@@ -16,7 +16,7 @@ var currentPageSlots = [];
 var amazonTamUnits = [];
 var REFRESH_KEY = "refresh";
 var REFRESH_VALUE = "true";
-var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 4
+var SECONDS_TO_WAIT_AFTER_VIEWABILITY = Math.floor(Math.random() * (35 - 30 + 1)) + 30;
 
 //Math.floor(Math.random() * (35 - 30 + 1)) + 30;
 function getDeviceType() {
@@ -51,7 +51,7 @@ googletag.cmd.push(function () {
 
 
 function refreshBid(slot, slotName, slotId, slotSize) {
-    var amazonRefUnits = [];
+    var apstagSlots = [];
     var ele = document.getElementById(slotId);
     if (getDeviceType() == "desktop") {
         adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
@@ -61,21 +61,19 @@ function refreshBid(slot, slotName, slotId, slotSize) {
     }
 
     if (slotId && adSize && slotName) {
-        var apstagSlots = {
+        var amazonRefUnits = {
             slotID: slotId,
             sizes: adSize,
             slotName: slotName
         };
-        amazonRefUnits.push(apstagSlots);
+        apstagSlots.push(amazonRefUnits);
     }
 
     function _getGPTSlots(apstagSlots) {
         var slotIDs = apstagSlots.map(function (slot) {
             return slot.slotID;
         });
-// return the slot objects corresponding to the gpt slotIDs
         return googletag.pubads().getSlots().filter(function (slot) {
-// return true if the ID of the slot object is in the gpt slotIDs array
             return slotIDs.indexOf(slot.getSlotElementId()) > -1;
         });
     }
@@ -84,7 +82,7 @@ function refreshBid(slot, slotName, slotId, slotSize) {
         slots: apstagSlots,
         timeout: 2e3
     }, function (bids) {
-// set apstag targeting on googletag, then trigger the the refresh call to dfp
+
         googletag.cmd.push(function () {
             apstag.setDisplayBids();
             googletag.pubads().refresh(_getGPTSlots(apstagSlots));
