@@ -18,7 +18,7 @@ var REFRESH_KEY = "refresh";
 var REFRESH_VALUE = "true";
 var SECONDS_TO_WAIT_AFTER_VIEWABILITY = Math.floor(Math.random() * (35 - 30 + 1)) + 30;
 
-//Math.floor(Math.random() * (35 - 30 + 1)) + 30;
+
 function getDeviceType() {
     try {
         var ua = navigator.userAgent;
@@ -141,7 +141,7 @@ function constructAds() {
                 }
 
             });
-            googletag.pubads().enableSingleRequest();
+
             apstag.fetchBids({
                 slots: amazonTamUnits,
             }, function (bids) {
@@ -159,6 +159,7 @@ function constructAds() {
 }
 
 async function displayAds() {
+    googletag.pubads().enableSingleRequest();
     try {
         await constructAds();
         var allAds = document.querySelectorAll("div[data-adslot]");
@@ -190,4 +191,3 @@ window.addEventListener('DOMContentLoaded', function () {
     }, 300);
 
 });
-
