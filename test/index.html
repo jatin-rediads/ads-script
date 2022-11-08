@@ -99,7 +99,7 @@
 <body>
 <div class="container">
 
-<!--  JS STARTED-->
+    <!--  JS STARTED-->
 
     <h2>-------------This is 1st Article---------------</h2>
     <p>
@@ -234,6 +234,36 @@
     Nulla efficitur fringilla lectus, id accumsan felis. Suspendisse euismod, nunc sit amet viverra commodo, ex mi
     molestie dolor, id molestie libero velit ut magna.
     <div class="spacer"></div>
+
+    <div class="Rediads_LSH_flex_adcontainer"
+         data-adslot="/21742552194/NueGamers/Leaderboard"
+         data-ad-refresh=true
+         backfill=true>
+        <script>
+
+            // if screen width is bigger than 1746 then show 300x600 ad
+            if (window.innerWidth > 1745) {
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-desktop', "[[300,600]]");
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-mobile', "[[]]");
+            }
+            // else if screen width is between 1460 and 1745, then show 160x600 ad
+            else if (window.innerWidth >= 1460 && window.innerWidth <= 1745) {
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-desktop', "[[160,600]]");
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-mobile', "[[]]");
+            }
+            // if screen width is between 1459 and 1375, then show 120x600 ad
+            else if (window.innerWidth >= 1375 && window.innerWidth <= 1459) {
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-desktop', "[[120,600]]");
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-mobile', "[[]]");
+                // else pass empty ads array
+            } else {
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-desktop', "[[]]");
+                document.querySelector('.Rediads_LSH_flex_adcontainer').setAttribute('data-size-mobile', "[[]]");
+            }
+
+        </script>
+
+    </div>
     Curabitur nec nibh purus. Donec vehicula bibendum rhoncus. Sed fermentum eu ipsum nec lacinia. Curabitur tempor
     maximus arcu ut ornare. Cras interdum finibus felis, nec congue massa. Integer commodo lectus sed metus malesuada
     pulvinar. Donec ornare, odio vel egestas hendrerit, quam felis malesuada leo, id finibus erat neque eu metus. Mauris

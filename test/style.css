@@ -1,2 +1,25 @@
 
 
+body {
+    place-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.Rediads_LSH_flex_adcontainer {
+    position: fixed;
+    z-index: 999999;
+    max-height: 600px;
+    min-width: 120px;
+    background-color: #f1f1f1;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+}
