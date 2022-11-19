@@ -75,7 +75,7 @@ function refreshBid(slot, slotName, slotId, slotSize) {
         }
     );
 }
-
+//asd
 
 function getDeviceType() {
     try {
