@@ -38,6 +38,7 @@ googletag.cmd.push(function () {
     setupGoogleTag();
 });
 
+//ads
 
 function constructAds() {
     try {
