@@ -1,3 +1,75 @@
+(function () {
+
+    // Load APS library
+    !function (a9, a, p, s, t, A, g) {
+        if (a[a9]) return;
+
+        function q(c, r) {
+            a[a9]._Q.push([c, r])
+        }
+
+        a[a9] = {
+            init: function () {
+                q("i", arguments)
+            }, fetchBids: function () {
+                q("f", arguments)
+            }, setDisplayBids: function () {
+            }, targetingKeys: function () {
+                return []
+            }, _Q: []
+        };
+        A = p.createElement(s);
+        A.async = !0;
+        A.src = t;
+        g = p.getElementsByTagName(s)[0];
+        g.parentNode.insertBefore(A, g)
+    }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+
+})();
+
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.onload = function () {
+        // remote script has loaded
+    };
+    js.src = "//s3.amazonaws.com/code.adsinnov/inkcremedia/gamertweak/staging/prebid.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'Rediads-Pixel-1'));
+
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.onload = function () {
+        // remote script has loaded
+    };
+    js.src = "//securepubads.g.doubleclick.net/tag/js/gpt.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'Rediads-Pixel-2'));
+
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.onload = function () {
+        // remote script has loaded
+    };
+    js.src = "//s3.amazonaws.com/code.adsinnov/inkcremedia/gamertweak/staging/hb.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'Rediads-Pixel-3'));
+
+
 window.googletag = window.googletag || {cmd: []};
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -360,4 +432,23 @@ setTimeout(function () {
     }(document, 'script', 'Rediads-Pixel'));
 }, 4000);
 
+//get url parameters ?desktop=[300,250]&mobile=[300,250]&tablet=[300,250]
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
 
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+
+    }
+}
+
+console.log(getUrlParameter('desktop'));
+console.log(getUrlParameter('mobile'));
+console.log(getUrlParameter('tablet'));
