@@ -51,7 +51,7 @@ function refreshBid(slot, slotName, slotId, slotSize) {
     if (getDeviceType() == "desktop") {
         adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
     }
-    if (getDeviceType() == "mobile") {
+    if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
         adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
     }
 
@@ -75,7 +75,7 @@ function refreshBid(slot, slotName, slotId, slotSize) {
         }
     );
 }
-//asd
+
 
 function getDeviceType() {
     try {
@@ -142,11 +142,6 @@ function prebid() {
                             params: {
                                 networkId: 11390
                             }
-                        }, {
-                            bidder: 'triplelift',
-                            params: {
-                                inventoryCode: 'Technclub_Leaderboard_320x50'
-                            }
                         }
                     ]
                 };
@@ -184,7 +179,7 @@ function constructAds() {
                 if (getDeviceType() == "desktop") {
                     adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
                 }
-                if (getDeviceType() == "mobile") {
+                if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
                     adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
                 }
 
@@ -333,21 +328,3 @@ window.addEventListener('DOMContentLoaded', function () {
     }, 300);
 
 });
-
-
-setTimeout(function () {
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.onload = function () {
-            // remote script has loaded
-        };
-        js.src = "//rediads.com/code/Redias_Pixel/dist/snippet.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'Rediads-Pixel'));
-}, 5000);
