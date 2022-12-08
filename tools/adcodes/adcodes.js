@@ -16,7 +16,8 @@ function generateCode() {
 
     if (Headcode === "DFP") {
         document.getElementById("HeadTag").value = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"><\/script>\n' +
-            '<script src="https://rediads.com/code/headscripts/dfp.js" defer><\/script>';
+            '<script src="https://rediads.com/code/headscripts/dfp.js" defer><\/script>\n' +
+            '<link rel="stylesheet" href="https://rediads.com/code/headscripts/ads.css">';
     } else if (Headcode === "DFPandAmazon") {
         document.getElementById("HeadTag").value =
             '<script>\n' +
@@ -50,12 +51,14 @@ function generateCode() {
             '        })();\n' +
             '    <\/script> \n' +
             '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"><\/script> \n' +
-            '<script src="https://rediads.com/code/headscripts/dfp_aps.js" defer><\/script>';
+            '<script src="https://rediads.com/code/headscripts/dfp_aps.js" defer><\/script> \n' +
+            '<link rel="stylesheet" href="https://rediads.com/code/headscripts/ads.css">';
     } else if (Headcode === "DFPandHB") {
         document.getElementById("HeadTag").value =
             '<script src="https://rediads.com/code/global/prebid.js"><\/script> \n' +
             '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"><\/script> \n' +
-            '<script src="https://rediads.com/code/headscripts/dfp_pb.js" defer><\/script>';
+            '<script src="https://rediads.com/code/headscripts/dfp_pb.js" defer><\/script>\n' +
+            '<link rel="stylesheet" href="https://rediads.com/code/headscripts/ads.css">';
     } else if (Headcode === "DFPandAmazonandHB") {
         document.getElementById("HeadTag").value =
 
@@ -91,7 +94,8 @@ function generateCode() {
             '    <\/script> \n' +
             '<script src="https://rediads.com/code/global/prebid.js"><\/script> \n' +
             '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"><\/script> \n' +
-            '<script src="https://rediads.com/code/headscripts/dfp_aps_pb.js" defer><\/script>';
+            '<script src="https://rediads.com/code/headscripts/dfp_aps_pb.js" defer><\/script>\n' +
+            '<link rel="stylesheet" href="https://rediads.com/code/headscripts/ads.css">';
 
 
     } else {
@@ -106,16 +110,13 @@ function generateCode() {
 
     } else if (CssInnovation === "Parallax") {
 
-        var bodydiv = '<div style="height:340px; text-align: center;  " class="AdsInnov_Container_Parallax">\n' +
-            '    <div class="AdsInnov_Ad_Lable">विज्ञापन</div>\n' +
-            '    <div class="AdsInnov_Container_Parallax_one">\n' +
-            '      <div class="AdsInnov_Container_Parallax_two" style="top: 20px;">\n' +
-            '        <div  style=\'min-width: 300px; min-height: 1050px;\'>\n' +
-            +BodyAdCode +
+        var bodydiv = '<div style="height:340px; text-align: center;" class="parallax_container">\n' +
+            '    <div class="parallax_container_one">\n' +
+            '        <div class="parallax_container_two" style="top: 20px;">\n' +
+            BodyAdCode +
             '        </div>\n' +
-            '      </div>\n' +
             '    </div>\n' +
-            '  </div>'
+            '</div>'
         document.getElementById("bodyadTag").value = bodydiv;
 
     } else if (CssInnovation === "In-Container-Scroll") {
@@ -128,14 +129,14 @@ function generateCode() {
 
     } else if (CssInnovation === "double-ad-Fixed") {
 
-        var bodydiv = '<div class="Adsinnov_flex_adcontainer">\n' +
-            '     <div class="AdsInnov_Ad_Card_MTF">\n' +
-            '         <div class="AdsInnov_Ad_Lable">advertisement</div>\n' +
+        var bodydiv = '<div class="Rediads_flex_adcontainer">\n' +
+            '     <div class="Rediads_Ad_Card_MTF">\n' +
+            '         <div class="Rediads_Ad_Lable">advertisement</div>\n' +
             BodyAdCode +
             '     </div>\n' +
             '\n' +
-            '     <div class="AdsInnov_Ad_Card_MTF_A">\n' +
-            '         <div class="AdsInnov_Ad_Lable">advertisement</div>\n' +
+            '     <div class="Rediads_Ad_Card_MTF_A">\n' +
+            '         <div class="Rediads_Ad_Lable">advertisement</div>\n' +
             BodyAdCode +
             '</div>';
         document.getElementById("bodyadTag").value = bodydiv;

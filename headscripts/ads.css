@@ -1,0 +1,294 @@
+/* Bottom Overlay Start */
+
+.Rediads_BottomSticky {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 90px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 99999;
+}
+
+@media only screen and (max-width: 600px) {
+    .Rediads_BottomSticky {
+        height: 50px !important;
+    }
+}
+
+/* Bottom Overlay End */
+
+/* Side to Side Ad CSS Start */
+
+.Rediads_LB_adsblocks {
+    min-width: 728px;
+    min-height: 90px;
+}
+
+.Rediads_ATF_adsblocks {
+    min-width: 300px;
+    min-height: 600px;
+}
+
+.Rediads_MTF_adsblocks {
+    min-width: 300px;
+    min-height: 250px;
+}
+
+.Redias_center {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .Rediads_LB_adsblocks {
+        min-width: 300px;
+        min-height: 250px;
+    }
+}
+
+.Rediads_flex_adcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Rediads_Ad_Card_MTF {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.Rediads_Ad_Card_Leaderboard {
+    width: 728px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.Rediads_Ad_Card_2_MTF {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.Rediads_Ad_Card_RSB {
+    width: 300px;
+    height: 280px;
+    padding: 5px;
+}
+
+.Rediads_Ad_Lable {
+    color: #949494;
+    content: "Advertisment";
+    font-family: "Barlow";
+    font-size: 12px;
+    padding: 1rem 2rem 0.25rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Rediads_Ad_Card_MTF_A {
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .Rediads_flex_adcontainer {
+        flex-direction: column;
+    }
+
+    .Rediads_Ad_Card_2_MTF {
+        display: none;
+    }
+
+    .Rediads_Ad_Card_MTF {
+        width: 100%;
+        height: 330px;
+        display: block;
+    }
+
+    .Rediads_Ad_Card_MTF_A {
+        width: 100%;
+        height: 70px;
+        display: block;
+    }
+
+    .Rediads_Ad_Card_Leaderboard {
+        width: 100%;
+        height: 280px;
+        display: block;
+    }
+}
+
+/* Side to Side Ad CSS Ends */
+
+/* Parallax Start */
+
+.parallax_container {
+    background-color: #fff;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin: 40px auto;
+}
+
+.parallax_container:before {
+    border-bottom: 1px solid #dfdfdf;
+    color: #949494;
+    content: "Parallax Ad Below";
+    font-family: "Barlow";
+    font-size: 12px;
+    padding: 1rem 2rem 0.25rem;
+    text-transform: uppercase;
+}
+
+.parallax_container_one {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    margin: auto;
+    z-index: auto;
+    clip: rect(0, auto, auto, 0);
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    top: 30px;
+}
+
+.parallax_container_two {
+    vertical-align: bottom;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .parallax_container_two {
+        width: 100% !important;
+    }
+}
+
+/* Parallax Ends */
+
+
+/* Sticky in Place Ad Start */
+
+/* Leaderboard Start */
+
+body .paisa-banner-lb {
+    display: block !important;
+    min-height: 300px !important;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+body .paisa-banner-lb:before {
+    border-bottom: 1px solid #dfdfdf;
+    color: #949494;
+    content: "Content Continues After Ad";
+    font-family: "Barlow";
+    font-size: 12px;
+    padding: 0 2rem 0.25rem;
+    text-transform: uppercase;
+}
+
+body .paisa-banner-lb > div:first-child {
+    margin-top: 0.5rem !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 55px;
+}
+
+/* Leaderboard Ends */
+
+/* MTF ad Start: css */
+
+body .paisa-banner {
+    display: block !important;
+    min-height: 500px !important;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+body .paisa-banner:before {
+    border-bottom: 1px solid #dfdfdf;
+    color: #949494;
+    content: "Content Continues After Ad";
+    font-family: "Barlow";
+    font-size: 12px;
+    padding: 0 2rem 0.25rem;
+    text-transform: uppercase;
+}
+
+
+body .paisa-banner > div:first-child {
+    margin-top: 0.5rem !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 55px;
+}
+
+.placeholder {
+    align-items: center;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder:empty::before {
+    background-color: dimgrey;
+    border-radius: 5px;
+    color: lightgrey;
+    content: "Ad";
+    font: 12px sans-serif;
+    padding: 3px;
+    text-align: center;
+    width: 20px;
+}
+
+@media (min-width: 576px) {
+
+    body .paisa-banner-lb {
+        min-height: 320px !important;
+    }
+
+    body .paisa-banner-lb > div:first-child {
+        top: 75px;
+    }
+
+    body .paisa-banner {
+        min-height: 320px !important;
+    }
+
+    body .paisa-banner > div:first-child {
+        top: 75px;
+    }
+
+
+}
+
+/* MTF ad ends: css */
+
+/* Sticky in Place Ad Ends */
