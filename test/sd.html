@@ -5,13 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<script src="https://rediads.com/code/global/ads_in_a_div.js" defer></script>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//rediads.com/code/headscripts/passback_dfp.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Rediads-Pixel-1'));  </script>
 
 <div
-        data-adslot="/21742552194/NueGamers/MTF_1"
-        data-size-desktop="[[320,50]]"
-        data-size-mobile="[[320,50]]"
-        data-ad-refresh=true>
-</div>
+        data-adslot="/21742552194/NueGamers/Leaderboard"
+        data-size-desktop="[[300,250]]"
+        data-size-mobile="[[300,250]]"
+        data-ad-refresh="true"
+></div>
 </body>
 </html>

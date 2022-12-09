@@ -34,23 +34,6 @@
     }
     js = d.createElement(s);
     js.id = id;
-    js.onload = function () {
-        // remote script has loaded
-    };
-    js.src = "//s3.amazonaws.com/code.adsinnov/inkcremedia/gamertweak/staging/prebid.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Rediads-Pixel-1'));
-
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-        return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.onload = function () {
-        // remote script has loaded
-    };
     js.src = "//securepubads.g.doubleclick.net/tag/js/gpt.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Rediads-Pixel-2'));
@@ -65,7 +48,7 @@ googletag.cmd.push(function () {
 });
 if (typeof apstag != "undefined") {
     apstag.init({
-        pubID: 'ac0d98fe-1a9c-4701-aede-efc3ec6932fa',
+        pubID: '5d8ed25e-57cc-441a-b62a-127b34faae4e',
         adServer: 'googletag',
         bidTimeout: 2e3
     });
@@ -91,7 +74,6 @@ googletag.cmd.push(function () {
 
 });
 
-//re
 function refreshBid(slot, slotName, slotId, slotSize) {
     pbjs.que.push(function () {
         pbjs.requestBids({
@@ -204,19 +186,6 @@ function prebid() {
                         }
                     ]
                 };
-
-                pbjs.setConfig({
-                    "currency": {
-                        // enables currency feature
-                        "adServerCurrency": "USD",
-                        "granularityMultiplier": 80, // 0.50 increment up to 5 is fine for GBP
-                        // optionally override the default rate file
-                        "conversionRateFile": "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json",
-                        // optionally provide a default rate in case the file can't be read
-                        "defaultRates": {"USD": {"INR": 80}}
-                    }
-                });
-
                 prebidAdUnits.push(objPrebid); //prebid
                 var divId = ele.getAttribute('id') ? ele.getAttribute('id') : '';
                 if (divId && adSize && adSlot) {
@@ -389,16 +358,11 @@ async function displayAds() {
     }
 }
 
-
 var intervalSeconds = 0.3;
 var secondsElapsed = 0;
 
 var refInterval = setInterval(function () {
-    if (
-        typeof googletag !== "undefined" &&
-        googletag.apiReady &&
-        typeof pbjs !== "undefined"
-    ) {
+    if (typeof googletag != 'undefined' && googletag.apiReady && typeof pbjs != 'undefined' && typeof apstag != 'undefined') {
         displayAds();
         clearInterval(refInterval);
         return;
@@ -409,22 +373,3 @@ var refInterval = setInterval(function () {
         return;
     }
 }, intervalSeconds);
-
-
-setTimeout(function () {
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.onload = function () {
-            // remote script has loaded
-        };
-        js.src = "//rediads.com/code/Redias_Pixel/dist/snippet.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'Rediads-Pixel'));
-}, 4000);
-
