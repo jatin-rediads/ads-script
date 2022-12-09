@@ -56,6 +56,7 @@
 }(document, 'script', 'Rediads-Pixel-2'));
 
 
+
 window.googletag = window.googletag || {cmd: []};
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -390,25 +391,12 @@ async function displayAds() {
 }
 
 
-var intervalSeconds = 0.3;
-var secondsElapsed = 0;
-
 var refInterval = setInterval(function () {
-    if (
-        typeof googletag !== "undefined" &&
-        googletag.apiReady &&
-        typeof pbjs !== "undefined"
-    ) {
+    if (typeof googletag != 'undefined' && googletag.apiReady && typeof pbjs.setConfig != 'undefined' && typeof apstag != 'undefined') {
         displayAds();
         clearInterval(refInterval);
-        return;
     }
-    secondsElapsed += intervalSeconds;
-    if (secondsElapsed > 10) {
-        clearInterval(refInterval);
-        return;
-    }
-}, intervalSeconds);
+}, 300);
 
 
 setTimeout(function () {
