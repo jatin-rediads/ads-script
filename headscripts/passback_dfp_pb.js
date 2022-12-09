@@ -62,6 +62,7 @@ function constructAds() {
         googletag.cmd.push(function () {
             setupGoogleTag();
         });
+
         var allAds = document.querySelectorAll("div[data-adslot]");
         if (allAds.length > 0) {
 
@@ -93,6 +94,7 @@ function constructAds() {
                         slot.addService(googletag.pubads());
                     });
                 }
+                googletag.enableServices();
 
             });
         }
@@ -124,7 +126,7 @@ async function displayAds() {
 }
 
 var refInterval = setInterval(function () {
-    if (typeof googletag != 'undefined' && googletag.apiReady === true && typeof pbjs != 'undefined') {
+    if (typeof googletag != 'undefined' && googletag.apiReady && typeof pbjs != 'undefined') {
         displayAds();
         clearInterval(refInterval);
     }
