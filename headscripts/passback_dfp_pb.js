@@ -55,15 +55,13 @@ function setupGoogleTag() {
     googletag.enableServices();
 }
 
-googletag.cmd.push(function () {
-    setupGoogleTag();
-});
-
 
 function constructAds() {
     try {
 
-
+        googletag.cmd.push(function () {
+            setupGoogleTag();
+        });
         var allAds = document.querySelectorAll("div[data-adslot]");
         if (allAds.length > 0) {
 
