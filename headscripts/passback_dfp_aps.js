@@ -232,6 +232,8 @@ async function displayAds() {
     }
 }
 
+var intervalSeconds = 0.3;
+var secondsElapsed = 0;
 var refInterval = setInterval(function () {
     if (
         typeof googletag !== "undefined" &&
