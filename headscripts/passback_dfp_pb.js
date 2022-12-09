@@ -7,7 +7,7 @@
     js.id = id;
     js.src = "//rediads.com/code/global/prebid.js";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Rediads-Pixel-1'));
+}(document, 'script', 'Rediads-Pixel-4'));
 
 (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
