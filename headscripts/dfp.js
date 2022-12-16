@@ -108,20 +108,3 @@ async function displayAds() {
 window.addEventListener('DOMContentLoaded', function () {
     displayAds();
 });
-
-setTimeout(function () {
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.onload = function () {
-            // remote script has loaded
-        };
-        js.src = "//rediads.com/code/Redias_Pixel/dist/snippet.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'Rediads-Pixel'));
-}, 4000);
