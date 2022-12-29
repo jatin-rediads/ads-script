@@ -103,7 +103,7 @@ function generateCode() {
     }
 
     if (CssInnovation === "Sticky") {
-        var bodydiv = '<div class="EujfCqUhLFJr98nr">\n' +
+        var bodydiv = '<div class="Rediads_BottomSticky">\n' +
             BodyAdCode +
             '</div>';
         document.getElementById("bodyadTag").value = bodydiv;
