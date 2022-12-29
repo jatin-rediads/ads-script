@@ -21,9 +21,43 @@
 }(document, 'script', 'Rediads-Pixel-2'));
 
 
+window.googletag = window.googletag || {cmd: []};
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+googletag.cmd.push(function () {
+    googletag.pubads().disableInitialLoad();
+});
+var currentPageSlots = [];
 var REFRESH_KEY = "refresh";
 var REFRESH_VALUE = "true";
 var SECONDS_TO_WAIT_AFTER_VIEWABILITY = Math.floor(Math.random() * (35 - 30 + 1)) + 30;
+googletag.cmd.push(function () {
+    googletag.pubads().addEventListener("impressionViewable", function (event) {
+        var slot = event.slot;
+        var slotId = event.slot.getSlotId().getName();
+        if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+            setTimeout(function () {
+                refreshBid(slot, slotId);
+            }, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);
+        }
+    });
+
+});
+
+function refreshBid(slot, slotId) {
+    pbjs.que.push(function () {
+        pbjs.requestBids({
+            timeout: PREBID_TIMEOUT,
+            adUnitCodes: [slotId],
+            bidsBackHandler: function () {
+                pbjs.setTargetingForGPTAsync([slotId]);
+                googletag.pubads().refresh([slot]);
+            }
+        });
+    });
+}
+
 
 function getDeviceType() {
     try {
@@ -40,51 +74,103 @@ function getDeviceType() {
     }
 }
 
-function setupGoogleTag() {
-    googletag
-        .pubads()
-        .addEventListener("impressionViewable", function (event) {
-            var slot = event.slot;
-            if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
-                setTimeout(function () {
-                    googletag.pubads().refresh([slot]);
-                }, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);
-            }
+
+var PREBID_TIMEOUT = 1500;
+var FAILSAFE_TIMEOUT = 2000;
+
+var requestManager = {
+    adserverRequestSent: false,
+    aps: false,
+    prebid: false,
+};
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+
+function initAdserver() {
+    if (pbjs.initAdserverSet) return;
+
+    googletag.cmd.push(function () {
+        pbjs.que.push(function () {
+            pbjs.setTargetingForGPTAsync();
+            googletag.pubads().refresh(currentPageSlots);
         });
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
+    });
+    pbjs.initAdserverSet = true;
 }
 
-
-function constructAds() {
+function prebid() {
     try {
-
-        googletag.cmd.push(function () {
-            setupGoogleTag();
-        });
-
+        var prebidAdUnits = [];
         var allAds = document.querySelectorAll("div[data-adslot]");
         if (allAds.length > 0) {
-
-
             allAds.forEach(function (ele) {
                 var adSlot = ele.getAttribute('data-adslot');
-                var adSize = ele.getAttribute('data-adsize-desktop');
+                //var adSize = JSON.parse(ele.getAttribute('data-size'));
+                let r = (Math.random() + 1).toString(36).substring(7);
+                ele.setAttribute('id', r);
                 if (getDeviceType() == "desktop") {
                     adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
                 }
                 if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
                     adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
                 }
+                var objPrebid = { //prebid
+                    code: adSlot,
+                    mediaTypes: {
+                        banner: {
+                            sizes: adSize
+                        }
+                    },
+                    bids: [{
+                        bidder: 'criteo',
+                        params: {
+                            networkId: 11390
+                        }
+                    }]
+                };
+                prebidAdUnits.push(objPrebid); //prebid
+            });
+
+            pbjs.que.push(function () {
+                pbjs.addAdUnits(prebidAdUnits);
+                pbjs.requestBids({
+                    timeout: PREBID_TIMEOUT,
+                    bidsBackHandler: function (bidResponses) {
+                        initAdserver();
+                    }
+                });
+            });
+            setTimeout(initAdserver, FAILSAFE_TIMEOUT);
+        }
+    } catch (e) {
+        console.log("prebid:" + e);
+    }
+
+}
+
+
+function constructAds() {
+    try {
+        var allAds = document.querySelectorAll("div[data-adslot]");
+        if (allAds.length > 0) {
+            allAds.forEach(function (ele) {
+                var adSlot = ele.getAttribute('data-adslot');
+                var adSize = JSON.parse(ele.getAttribute('data-size'));
                 var refresh = ele.getAttribute('data-ad-refresh');
-                let r = (Math.random() + 1).toString(36).substring(7);
-                ele.setAttribute('id', r);
+                if (getDeviceType() == "desktop") {
+                    adSize = JSON.parse(ele.getAttribute('data-size-desktop'));
+                }
+                if (getDeviceType() == "mobile" || getDeviceType() == "tablet") {
+                    adSize = JSON.parse(ele.getAttribute('data-size-mobile'));
+                }
+
+                var divId = ele.getAttribute('id');
                 if (typeof googletag != 'undefined') {
-
-
                     googletag.cmd.push(function () {
+                        var slot = googletag.defineSlot(adSlot, adSize, divId);
+                        currentPageSlots && currentPageSlots.push(slot);
 
-                        var slot = googletag.defineSlot(adSlot, adSize, r);
 
                         if (refresh === 'true') {
 
@@ -92,9 +178,9 @@ function constructAds() {
                         }
 
                         slot.addService(googletag.pubads());
+                        googletag.enableServices();
                     });
                 }
-                googletag.enableServices();
 
             });
         }
@@ -103,8 +189,11 @@ function constructAds() {
     }
 }
 
+
 async function displayAds() {
     try {
+        await prebid();
+
         await constructAds();
         var allAds = document.querySelectorAll("div[data-adslot]");
         if (allAds.length > 0) {
@@ -119,11 +208,13 @@ async function displayAds() {
                 }
 
             });
+
         }
     } catch (e) {
         console.log("displayAds:" + e);
     }
 }
+
 
 var refInterval = setInterval(function () {
     if (typeof googletag != 'undefined' && googletag.apiReady && typeof pbjs != 'undefined') {
@@ -131,3 +222,4 @@ var refInterval = setInterval(function () {
         clearInterval(refInterval);
     }
 }, 300);
+
