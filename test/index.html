@@ -19,9 +19,40 @@
 
         gtag('config', 'G-YWZD14PSVY');
     </script>
+    <script>
+        (function () {
+
+            // Load APS library
+            !function (a9, a, p, s, t, A, g) {
+                if (a[a9]) return;
+
+                function q(c, r) {
+                    a[a9]._Q.push([c, r])
+                }
+
+                a[a9] = {
+                    init: function () {
+                        q("i", arguments)
+                    }, fetchBids: function () {
+                        q("f", arguments)
+                    }, setDisplayBids: function () {
+                    }, targetingKeys: function () {
+                        return []
+                    }, _Q: []
+                };
+                A = p.createElement(s);
+                A.async = !0;
+                A.src = t;
+                g = p.getElementsByTagName(s)[0];
+                g.parentNode.insertBefore(A, g)
+            }("apstag", window, document, "script", "//c.amazon-adsystem.com/aax2/apstag.js");
+
+        })();
+    </script>
     <script async type="text/javascript" src="//securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script async type="text/javascript" src="/global/prebid.js"></script>
-    <script src="/headscripts/dfp_pb.js"></script>
+    <script async type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/prebid.js@latest/dist/not-for-prod/prebid.js"></script>
+    <script src="modify.js"></script>
 
     <script>
         function fetchNewArticle() {

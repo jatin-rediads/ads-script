@@ -137,12 +137,7 @@ function prebid() {
                                 siteId: 440604,
                                 zoneId: 2532348
                             }
-                        }, {
-                            bidder: 'criteo',
-                            params: {
-                                networkId: 11390
-                            }
-                        }
+                        }, {bidder: 'criteo', params: {networkId: 11390}},
                     ]
                 };
                 prebidAdUnits.push(objPrebid); //prebid
