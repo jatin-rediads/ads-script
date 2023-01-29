@@ -228,7 +228,7 @@ function constructAds() {
                         googletag.enableServices();
                         googletag.pubads().enableLazyLoad({
                             // Fetch slots within 5 viewports.
-                            fetchMarginPercent: 500,
+                            fetchMarginPercent: 300,
                             // Render slots within 2 viewports.
                             renderMarginPercent: 200,
                             // Double the above values on mobile, where viewports are smaller
