@@ -161,17 +161,17 @@ function prebid() {
                     ]
                 };
 
-                pbjs.setConfig({
-                    "currency": {
-                        // enables currency feature
-                        "adServerCurrency": "USD",
-                        "granularityMultiplier": 80, // 0.50 increment up to 5 is fine for GBP
-                        // optionally override the default rate file
-                        "conversionRateFile": "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json",
-                        // optionally provide a default rate in case the file can't be read
-                        "defaultRates": {"USD": {"INR": 80}}
-                    }
-                });
+                // pbjs.setConfig({
+                //     "currency": {
+                //         // enables currency feature
+                //         "adServerCurrency": "USD",
+                //         "granularityMultiplier": 80, // 0.50 increment up to 5 is fine for GBP
+                //         // optionally override the default rate file
+                //         "conversionRateFile": "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json",
+                //         // optionally provide a default rate in case the file can't be read
+                //         "defaultRates": {"USD": {"INR": 80}}
+                //     }
+                // });
 
                 prebidAdUnits.push(objPrebid); //prebid
                 var divId = ele.getAttribute('id') ? ele.getAttribute('id') : '';
